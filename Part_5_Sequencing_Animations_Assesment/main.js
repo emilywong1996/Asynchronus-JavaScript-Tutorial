@@ -13,24 +13,8 @@ const alice1 = document.querySelector("#alice1");
 const alice2 = document.querySelector("#alice2");
 const alice3 = document.querySelector("#alice3");
 
-function aliceA(){
-  setTimeout(()=>{
-    alice1.animate(aliceTumbling, aliceTiming);
-  },0)
-}
-
-function aliceB(){
-  setTimeout(()=>{
-    alice2.animate(aliceTumbling, aliceTiming);
-  },2000)
-}
-
-function aliceC(){
-  setTimeout(()=>{
-    alice3.animate(aliceTumbling, aliceTiming);
-  },4000)
-}
-
-aliceA();
-aliceB();
-aliceC();
+alice1.animate(aliceTumbling, aliceTiming).finished.then(function() {
+  alice2.animate(aliceTumbling, aliceTiming).finished.then(function() {
+    alice3.animate(aliceTumbling, aliceTiming)
+  })
+});
