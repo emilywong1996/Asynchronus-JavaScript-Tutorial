@@ -18,3 +18,5 @@ alice1.animate(aliceTumbling, aliceTiming).finished.then(function() {
     alice3.animate(aliceTumbling, aliceTiming)
   })
 });
+
+// https://stackoverflow.com/questions/67517303/why-the-animate-callback-function-doesnt-execute
